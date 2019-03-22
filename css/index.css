@@ -170,6 +170,13 @@ div.hero {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 840px) {
+  .container,
+  main,
+  div.hero {
+    padding: 0 20px;
+  }
+}
 @media (max-width: 500px) {
   .container,
   main,
@@ -299,6 +306,8 @@ header div.hero img {
 }
 .home .content-section .img-content img {
   border-radius: 10px;
+  animation: shake 5s 0s infinite cubic-bezier(0.4, 0.21, 0.49, 0.89);
+  -webkit-animation: shake 5s 0s infinite cubic-bezier(0.4, 0.21, 0.49, 0.89);
 }
 @media (max-width: 500px) {
   .home .content-section .img-content img {
@@ -336,6 +345,8 @@ header div.hero img {
 }
 .home .content-destination img {
   border-radius: 10px;
+  animation: shake 5s 0s infinite cubic-bezier(0.4, 0.21, 0.49, 0.89);
+  -webkit-animation: shake 5s 0s infinite cubic-bezier(0.4, 0.21, 0.49, 0.89);
 }
 .home .content-pick {
   padding-top: 30px;
@@ -358,5 +369,22 @@ header div.hero img {
 @media (max-width: 500px) {
   .home .content-pick .destination {
     width: 80%;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg) translateY(0);
+  }
+  25% {
+    transform: rotateZ(1deg) translateY(2px);
+  }
+  50% {
+    transform: rotateZ(0deg) translateY(5px);
+  }
+  75% {
+    transform: rotateZ(-1deg) translateY(2px);
+  }
+  100% {
+    transform: rotateZ(0deg) translateY(0);
   }
 }
