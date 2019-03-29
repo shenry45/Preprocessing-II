@@ -39,8 +39,25 @@ img {
   height: auto;
 }
 
-.container {
+.container, main, div.hero {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media @tablet {
+    padding: 0 20px;
+  }
+
+  @media @mobile {
+    max-width: 90%;
+  }
 }
+
+div.btn {
+  .aqua-button();
+
+  @media @mobile {
+    width: 100%;
+  }
+}
+
